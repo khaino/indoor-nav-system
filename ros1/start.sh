@@ -1,0 +1,1 @@
+docker run --name bridge -it --network=host --cap-add=NET_ADMIN roscb
