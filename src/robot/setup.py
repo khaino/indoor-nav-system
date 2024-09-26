@@ -10,6 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/description/scout_description/urdf/', ['robot.xacro']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
