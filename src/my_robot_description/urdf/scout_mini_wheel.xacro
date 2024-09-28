@@ -11,7 +11,7 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://scout_description/meshes/wheel.dae" />
+                    <mesh filename="file:///home/scoutmini/workspace/indoor-nav-system/src/my_robot_description/meshes/wheel.dae" />
                 </geometry>
             </visual>
             <collision>
@@ -20,7 +20,7 @@
                 rpy="0 0 0" />
               <geometry>
                 <mesh
-                  filename="package://scout_description/meshes/wheel.dae" />
+                  filename="file:///home/scoutmini/workspace/indoor-nav-system/src/my_robot_description/meshes/wheel.dae" />
               </geometry>
             </collision>
         </link>
