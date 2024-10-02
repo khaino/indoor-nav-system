@@ -91,9 +91,9 @@
     <!-- Additional definitions -->
     <xacro:include filename="$(arg urdf_extras)" />
 
-    <xacro:include filename="$(find my_robot_description)/urdf/scout_mini.gazebo" />
+    <!-- <xacro:include filename="$(find my_robot_description)/urdf/scout_mini.gazebo" /> -->
 
-    <!-- <xacro:include filename="$(find my_robot_description)/urdf/scout_wheel.gazebo" />  -->
+    <xacro:include filename="$(find my_robot_description)/urdf/scout_wheel.gazebo" /> 
 
     <!-- Additional definitions for simulation -->
     <!-- <gazebo reference="base_link">
@@ -101,17 +101,17 @@
     </gazebo> -->
 
     <!-- Actuator configurations -->
-    <!-- <xacro:scout_wheel_transmission wheel_prefix="front_right" />
+    <xacro:scout_wheel_transmission wheel_prefix="front_right" />
     <xacro:scout_wheel_transmission wheel_prefix="front_left" />
     <xacro:scout_wheel_transmission wheel_prefix="rear_left" />
-    <xacro:scout_wheel_transmission wheel_prefix="rear_right" /> -->
+    <xacro:scout_wheel_transmission wheel_prefix="rear_right" />
 
     <!-- Controller configurations -->
-    <!-- <gazebo>
+    <gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
             <robotNamespace>$(arg robot_namespace)</robotNamespace>
         </plugin>
-    </gazebo> -->
+    </gazebo>
 
     <!-- kp spring constant, kd damping constant -->
     <!-- <gazebo>
@@ -199,5 +199,10 @@
         <child link="caster_wheel_link" />
         <origin xyz="0.2 0 -0.05" rpy="0 0 0" />
     </joint> -->
+
+    <!-- Lidar Robosense 16 -->
+    <!-- <xacro:include filename="$(find my_robot_description)/urdf/RS16.urdf.xacro"/>
+    <xacro:RS16 origin="0 0 0 0 0 0"  /> -->
+
 
 </robot>
