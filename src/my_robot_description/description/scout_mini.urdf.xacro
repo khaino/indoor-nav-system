@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="scout_mini">
+
+    <xacro:include filename="scout_mini_core.xacro" />
+    <!-- <xacro:include filename="$(find my_robot_description)/urdf/scout_wheel.gazebo" />  -->
+    
+</robot>
