@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebSocket Client</title>
+    </head>
+    <body>
+        <div>
+            <button onclick="contactServer()">Start</button>
+            <button onclick="isOpen()">Check</button>
+        </div>
+        <img id="cam" src="data:image/png;base64,iVBORw0KGgoAAA
+                ANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
+                //8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU
+                5ErkJggg==" />
+    </body>
+    <script>
+        const socket = new WebSocket('ws://localhost:8000');
+        socket.addEventListener('open', function (event) {
+            console.log('Connection Established');
+        });
+        socket.addEventListener('message', function (event) {
+            const img = document.getElementById("cam")
+            // console.log(event.data)
+            img.src = "data:image/jpeg;base64," + event.data
+        });
+        function contactServer() {
+            socket.send("Begin stream");
+        }
+        function isOpen() { console.log(socket.readyState === socket.OPEN) }
+    </script>
+</html>
