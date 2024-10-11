@@ -42,6 +42,15 @@
         </collision>
     </link>
 
+    <joint name="base_footprint_link" type="fixed">
+        <parent link="base_footprint" />
+        <child link="inertial_link" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+    <link name="base_footprint">
+    </link>
+
     <link name="inertial_link">
         <inertial>
             <mass value="60" />
@@ -88,6 +97,8 @@
         <child link="rear_mount" />
     </joint>
 
-   
+   <xacro:unless value="$(arg use_ros2_control)">
+        <xacro:include filename="gazebo_control.xacro" />
+    </xacro:unless>
 
 </robot>

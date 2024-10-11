@@ -279,5 +279,13 @@
         <origin xyz="0 0 0.4" rpy="0 0 0" />
     </xacro:RS-16> -->
 
+            <!-- Output -->
+            <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
 
+            <publish_odom>true</publish_odom>
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+            </plugin>
 </robot>
