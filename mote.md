@@ -21,3 +21,6 @@ ros2 run nav2_map_server map_server --ros-args -p yaml_file_name:=smap_11011.yam
 ros2 launch nav2_bringup navigation_launch.py use_sim_time:=false
 
 
+#sudo useradd -m smremote -s /bin/bash
+
+
