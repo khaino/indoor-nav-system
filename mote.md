@@ -24,3 +24,10 @@ ros2 launch nav2_bringup navigation_launch.py use_sim_time:=false
 #sudo useradd -m smremote -s /bin/bash
 
 
+ros2 launch nav2_bringup localization_launch.py map:=./maps/20241211/m1.yaml use_sim_time:=false
+ros2 launch my_robot_description localization_launch.py map:=./maps/20241211/m1.yaml use_sim_time:=fals
+
+
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=false map_subscribe_transient_local:=true
+
+
